@@ -43,34 +43,43 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	// });
 
 	// 关于及其子菜单
-	links.push({
-		name: "关于",
-		url: "/content/",
-		icon: "material-symbols:info",
-		children: [
-			// 根据配置决定是否添加赞助，在siteConfig关闭pages.sponsor时导航栏不显示赞助
-			...(siteConfig.pages.sponsor ? [LinkPreset.Sponsor] : []),
+	// links.push({
+	// 	name: "关于",
+	// 	url: "/content/",
+	// 	icon: "material-symbols:info",
+	// 	children: [
+	// 		// 根据配置决定是否添加赞助，在siteConfig关闭pages.sponsor时导航栏不显示赞助
+	// 		...(siteConfig.pages.sponsor ? [LinkPreset.Sponsor] : []),
 
-			// 关于页面
-			LinkPreset.About,
-		],
-	});
+	// 		// 关于页面
+	// 		LinkPreset.About,
+	// 	],
+	// });
+
+	links.push(LinkPreset.About);
+
 
 	// 自定义导航栏链接,并且支持多级菜单
-	links.push({
-		name: "链接",
-		url: "/links/",
-		icon: "material-symbols:link",
+	// links.push({
+	// 	name: "链接",
+	// 	url: "/links/",
+	// 	icon: "material-symbols:link",
 
-		// 子菜单
-		children: [
-			{
-				name: "GitHub",
-				url: "https://github.com/lemonjc",
-				external: true,
-				icon: "fa7-brands:github",
-			}
-		],
+	// 	// 子菜单
+	// 	children: [
+	// 		{
+	// 			name: "GitHub",
+	// 			url: "https://github.com/lemonjc",
+	// 			external: true,
+	// 			icon: "fa7-brands:github",
+	// 		}
+	// 	],
+	// });
+	links.push({
+		name: "GitHub",
+		url: "https://github.com/lemonjc",
+		external: true,
+		icon: "fa7-brands:github",
 	});
 
 	// 仅返回链接，其它导航搜索相关配置在模块顶层常量中独立导出
