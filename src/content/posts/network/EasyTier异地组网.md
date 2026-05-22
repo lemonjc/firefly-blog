@@ -170,7 +170,7 @@ systemctl status easytier@default
 sudo systemctl stop easytier@default
 ```
 
-> **提示：获取服务器节点地址**
+> [!TIP] TIP
 > 默认情况下，EasyTier 会监听 TCP/UDP 的 11010 端口作为节点间通信端口。客户端接入时，可使用 `tcp://<服务器公网IP>:11010` 作为初始节点地址。如果配置文件中自定义了 `listeners`，以实际配置的地址为准。
 
 ## 客户端接入网络

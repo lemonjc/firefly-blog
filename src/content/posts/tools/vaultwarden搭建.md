@@ -72,7 +72,8 @@ docker compose up -d
 sudo caddy reload --config /etc/caddy/Caddyfile
 ```
 
-> **注意**：请确保日志目录（如 `/var/www/vaultwarden`）存在且有写入权限。
+> [!NOTE] Note
+> 请确保日志目录（如 `/var/www/vaultwarden`）存在且有写入权限。
 
 现在通过域名访问你的 Vaultwarden 实例，注册管理员账号并登录。
 
@@ -162,7 +163,8 @@ services:
       - ./vaultwarden-rclone-data:/config      # Rclone 配置目录
 ```
 
-> **说明**：通过以上配置，备份工具将每天早上 01:15 自动将 `/data` 下的 Vaultwarden 数据打包为加密 ZIP 文件，然后通过 Rclone 上传到阿里云 OSS 的指定路径。更多高级选项（如邮件通知、健康检查等）请参阅 [官方文档](https://github.com/ttionya/vaultwarden-backup/blob/master/README_zh.md)。
+> [!IMPORTANT] IMPORTANT
+> 通过以上配置，备份工具将每天早上 01:15 自动将 `/data` 下的 Vaultwarden 数据打包为加密 ZIP 文件，然后通过 Rclone 上传到阿里云 OSS 的指定路径。更多高级选项（如邮件通知、健康检查等）请参阅 [官方文档](https://github.com/ttionya/vaultwarden-backup/blob/master/README_zh.md)。
 
 启动全部服务：
 

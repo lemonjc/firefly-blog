@@ -29,7 +29,8 @@ Bitwarden 的 SSH Agent 可以将你的 SSH 私钥保存在加密的密码库中
 1. 同样新建一个**SSH 密钥**类型的条目，**暂时输入名称信息**，保存。
 2. 回到编辑器，打开刚刚创建的条目，将你的现有**私钥**完整粘贴到私钥字段中，补全公钥（如果可用）和其他信息，保存。
 
-> **提示**：私钥内容包括以 `-----BEGIN OPENSSH PRIVATE KEY-----` 开头和 `-----END OPENSSH PRIVATE KEY-----` 结尾的完整文本。
+> [!TIP] TIP
+> 私钥内容包括以 `-----BEGIN OPENSSH PRIVATE KEY-----` 开头和 `-----END OPENSSH PRIVATE KEY-----` 结尾的完整文本。
 
 ## 配置 Bitwarden SSH Agent
 
@@ -62,7 +63,8 @@ Windows 上需**先禁用系统自带的 OpenSSH 代理服务**，避免端口�
   export SSH_AUTH_SOCK="/Users/<user>/.bitwarden-ssh-agent.sock"
   ```
 
-> **全局生效**：若希望所有终端（包括 GUI 应用）都能使用该代理，可使用 `launchctl setenv` 设置：
+> [!TIP] TIP
+> 若希望所有终端（包括 GUI 应用）都能使用该代理，可使用 `launchctl setenv` 设置：
 > ```bash
 > launchctl setenv SSH_AUTH_SOCK "/Users/<user>/.bitwarden-ssh-agent.sock"
 > ```
@@ -80,7 +82,8 @@ export SSH_AUTH_SOCK="/home/<user>/.bitwarden-ssh-agent.sock"
 
 同样，建议将该行加入 `~/.bashrc` 或 `~/.zshrc` 实现持久化。
 
-> **注意**：务必使用正确的用户名替换 `<user>`，并且路径中的 `home` 前缀与实际家目录一致。
+> [!NOTE] NOTE
+> 务必使用正确的用户名替换 `<user>`，并且路径中的 `home` 前缀与实际家目录一致。
 
 ## 启用 Bitwarden SSH Agent
 
