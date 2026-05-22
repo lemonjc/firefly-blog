@@ -38,7 +38,7 @@
     "@iconify/utils": "^3.1.1",
     "@swup/astro": "^1.8.0",
     "@tailwindcss/typography": "^0.5.16",
-    "astro": "6.3.5",
+    "astro": "6.3.7",
     "astro-expressive-code": "^0.42.0",
     "astro-icon": "^1.1.5",
     "dayjs": "^1.11.20",
@@ -71,7 +71,7 @@
     "satori": "^0.26.0",
     "sharp": "^0.34.5",
     "stylus": "^0.64.0",
-    "svelte": "^5.55.8",
+    "svelte": "^5.55.9",
     "typescript": "^5.9.2",
     "unist-util-is": "^6.0.1",
     "unist-util-visit": "^5.1.0"
